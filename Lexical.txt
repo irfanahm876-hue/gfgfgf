@@ -1,0 +1,130 @@
+//#numeric.cpp
+#include<iostream>
+using namespace std;
+
+/*int main()  {
+    char input [100];
+    int i=0 , isNumeric =1;
+
+    cout<<"Enter input: ";
+    cin>>input;
+
+    while(input[i] !='\0') {
+        if(input[i]<'0' || input[i]>'9') {
+        isNumeric =0;
+        break;
+    }
+     i++;
+}
+if (isNumeric)
+    cout<< "This is a Numeric constant."<<endl;
+else
+    cout<<"This is not Numeric."<<endl;
+return 0;
+}
+*/
+
+//#operator.cpp
+
+#include<iostream>
+using namespace std;
+/*int main() {
+    char input[100];
+    int i=0;
+
+    cout <<"Enter an expression :";
+    cin>>input;
+
+    while (input[i]  !='\0') {
+        if(input[i]=='+' ||input[i]=='-'||input[i]=='*'||input[i]=='/'||input[i]=='%'||input[i]=='=') {
+            cout <<"Operator found :"<<input[i]<<endl;
+        }
+        i++;
+    }
+
+    return 0;
+
+}
+*/
+//#comment.cpp
+
+#include<iostream>
+using namespace std;
+
+
+int main ()  {
+    char input[200];
+
+
+    cout<<"Enter a line :";
+    cin.getline(input,200);
+
+    if(input[0]=='/' && input[1]=='/') {
+    cout<<"This is a single-line comment."<<endl;
+
+    }
+
+    else if (input[0]=='/'&& input[1]=='*')  {
+            int len=0,isComment=0;
+            while (input[len] !='0') {
+                if (input[len] == '*' && input[len + 1] == '/') {
+                isComment = 1;
+                break;
+            }
+            len++;
+        }
+        if (isComment)
+            cout << "This is a multi-line comment." << endl;
+        else
+            cout << "This is not a comment." << endl;
+            }
+
+            else{
+                cout<<"This is not a comment."<<endl;
+            }
+
+        return 0;
+
+}
+//#indentifier.cpp
+
+#include<iostream>
+using namespace std;
+
+/*int main() {
+
+    char input[100];
+    int i=0, isValid=1;
+
+    cout <<"Enter identifier :";
+    cin>>input;
+
+
+
+    if (!((input[0] >= 'A' && input[0] <= 'Z') ||
+          (input[0] >= 'a' && input[0] <= 'z') ||
+           input[0] == '_')) {
+        isValid = 0;
+    } else {
+        // Check remaining characters
+        i = 1;
+        while (input[i] != '\0') {
+            if (!((input[i] >= 'A' && input[i] <= 'Z') ||
+                  (input[i] >= 'a' && input[i] <= 'z') ||
+                  (input[i] >= '0' && input[i] <= '9') ||
+                   input[i] == '_')) {
+                isValid = 0;
+                break;
+            }
+            i++;
+        }
+    }
+
+    if (isValid)
+        cout << "This is a valid identifier." << endl;
+    else
+        cout << "This is not a valid identifier." << endl;
+
+    return 0;
+}
+*/
